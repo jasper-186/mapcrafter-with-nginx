@@ -5,10 +5,10 @@ FROM dinip/mapcrafter:world120
 RUN apk add nginx
 
 # Copy the Nginx config
-COPY default-site.conf /etc/nginx/sites-available/default
+COPY /defaults/nginx/default-site.conf /etc/nginx/sites-available/default
 
-RUN mkdir /defaults
-COPY ./defaults/* /defaults/
+RUN mkdir -p /defaults/mapcrafter
+COPY ./defaults/mapcrafter/* /defaults/mapcrafter/
 COPY  init.sh /init.sh
 
 # Expose the port for access
