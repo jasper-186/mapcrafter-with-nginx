@@ -1,10 +1,13 @@
 #!/bin/sh
 #check for defaults, and copy them in
 
-echo "Begining rendering of the world?"
 # Generate the world
+echo "Begining rendering of the world?"
 sh /opt/start.sh
 
-echo "Starting nginx server"
 # start the webserver
+echo "Starting nginx server"
 /usr/sbin/nginx -g "daemon off;"
+
+#follow the generator log so we can track progress of the generation
+tail --follow=name /config/mapcrafter.log
