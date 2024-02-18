@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #check for defaults, and copy them in
 
 if [ ! -f "/config/favicon.png" ]; then
@@ -18,7 +18,7 @@ if [ ! -f "/config/mapcrafter-cron" ]; then
 fi
 
 # Generate the world
-bash /opt/./start.sh
+sh /opt/start.sh
 
 # start the webserver
 /usr/sbin/nginx -g daemon off

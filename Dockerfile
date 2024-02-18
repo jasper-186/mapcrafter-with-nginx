@@ -15,7 +15,7 @@ COPY  init.sh /init.sh
 EXPOSE 80/tcp
 
 # Build the World && Run the Nginx server in the init script
-CMD ["bash","/init.sh"]
+CMD ["sh","/init.sh"]
 
 
 
