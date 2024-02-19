@@ -8,7 +8,7 @@ RUN apk add nginx
 RUN mkdir -p /run/nginx
 
 # Copy the Nginx config
-COPY /defaults/nginx/default-site.conf /etc/nginx/sites-available/default
+COPY /defaults/nginx/default-site.conf /etc/nginx/conf.d/default.conf
 
 # copy the init script
 COPY init.sh /init.sh
