@@ -9,7 +9,8 @@ sh /opt/render.sh &
 
 # start the webserver
 echo "Starting nginx server"
-/usr/sbin/nginx -g "daemon off;"
+/usr/sbin/nginx #-g "daemon off;"
 
+echo "Tailing the log file"
 #follow the generator log so we can track progress of the generation
 tail --follow=name /config/mapcrafter.log
