@@ -13,4 +13,4 @@ echo "Starting nginx server"
 
 echo "Tailing the log file"
 #follow the generator log so we can track progress of the generation
-tail --follow=name /config/mapcrafter.log
+tail -f /config/mapcrafter.log
